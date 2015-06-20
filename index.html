@@ -1,24 +1,23 @@
 <!doctype html>
-<html ng-app>
+<html ng-app="myApp">
   <head>
-    <meta charset="utf-8">
-    <title>AngularJS Email App</title>
-    <link href="css/style.css" rel="stylesheet">
+    <title>Sample AngularJS Controller</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-        <div ng-controller="TestCtrl">
-          <h1>{{title}}</h1>
-          <input type="text" ng-model="title">
-        </div>
+    <div class="main" role="main">
+      <div class="wrapper">
+        <div ng-view></div>
+      </div>
+    </div>
 
+    <!-- Vendor libraries -->
+    <script src="lib/jquery-v1.11.1.js"></script>
+    <script src="lib/angular-v1.2.22.js"></script>
+    <script src="lib/angular-route-v1.2.22.js"></script>
+    <!-- Application Files -->
+    <script src="js/main.js"></script>
+    <script src="js/controllers/inbox.js"></script>
 
-        <script src="lib/jquery.js"></script>
-        <script src="lib/angular.min.js"></script>
-
-        <script>
-          function TestCtrl($scope) {
-            $scope.title = 'Test Title';
-          };
-        </script>
-    </body>
+  </body>
 </html>
